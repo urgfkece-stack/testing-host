@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Hadiah Buat Kamu!</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: #6fd2df;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff6f61;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff6f61;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .surprise {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #ff4d6d;
+      font-weight: bold;
+      visibility: hidden;
+    }
+
+    .emoji {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="emoji">🎁</div>
+    <div class="message">p wein klik ini!</div>
+    <button class="btn" onclick="reveal()">Buka Hadiah</button>
+    <div class="surprise" id="surprise"> TARAAA MAK JRENGG, BAYAR UTANGG</div>
+  </div>
+
+  <script>
+    function reveal() {
+      const surprise = document.getElementById('surprise');
+      surprise.style.visibility = 'visible';
+    }
+  </script>
+</body>
+</html>
